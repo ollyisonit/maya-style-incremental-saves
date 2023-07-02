@@ -9,13 +9,16 @@ class IncrementalSaveExtension(Extension):
         super().__init__(parent)
 
     def incremental_save(self):
-        incrementaltools.increment(
-            ".kra",
-            Krita.instance().activeDocument().fileName,
-            Krita.instance().activeDocument().save,
-            Krita.instance().activeDocument().saveAs,
-            lambda msg: print(msg),
-        )
+        if Krita.instance().activeDocument().fileName() == "":
+            Krita.instance().action("file_save_as").trigger()
+        else:
+            incrementaltools.increment(
+                ".kra",
+                Krita.instance().activeDocument().fileName,
+                Krita.instance().activeDocument().save,
+                Krita.instance().activeDocument().saveAs,
+                lambda msg: print(msg),
+            )
 
     def setup(self):
         pass
