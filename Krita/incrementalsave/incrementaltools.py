@@ -19,7 +19,9 @@ def increment(
 
     PROJECTNAME_PATTERN = r".*\.(\d*)" + FILE_SUFFIX + "$"
     FOLDER_PATTERN = (
-        r".*/incrementalSaves/(?P<orig_name>.*)/(?P=orig_name).(?P<number>\d*)"
+        r".*/incrementalSaves/(?P<orig_name>.*)"
+        + FILE_SUFFIX
+        + r"/(?P=orig_name).(?P<number>\d*)"
         + FILE_SUFFIX
         + "$"
     )
