@@ -2,7 +2,6 @@
 <ActionCollection version="2" name="Scripts">
     <Actions category="Scripts">
         <text>Incremental Save</text>
-
         <Action name="dninosores_incremental_save">
             <icon></icon>
             <text>Incremental Save</text>

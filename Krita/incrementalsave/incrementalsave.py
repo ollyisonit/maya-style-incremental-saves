@@ -8,7 +8,7 @@ class IncrementalSaveExtension(Extension):
     def __init__(self, parent):
         super().__init__(parent)
 
-    def incremental_save():
+    def incremental_save(self):
         incrementaltools.increment(
             ".kra",
             Krita.instance().activeDocument().fileName,
