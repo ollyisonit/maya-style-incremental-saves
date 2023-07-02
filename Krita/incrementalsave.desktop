@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=incrementalsave
+X-Python-2-Compatible=false
+X-Krita-Manual=incrementalsave.txt
+Name=Incremental Save
+Comment=Adds incremental save function to Krita.

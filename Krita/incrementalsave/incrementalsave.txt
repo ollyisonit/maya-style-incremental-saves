@@ -1,0 +1,2 @@
+Adds menu item to perform an incremental save that copies an old version of the file to an incrementalSaves folder before saving. 
+If you open one of the old increments and save it, that file will automatically become the most-recent version.

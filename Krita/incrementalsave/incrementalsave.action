@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActionCollection version="2" name="Scripts">
+    <Actions category="Scripts">
+        <text>Incremental Save</text>
+
+        <Action name="dninosores_incremental_save">
+            <icon></icon>
+            <text>Incremental Save</text>
+            <whatsThis>Copies old version of file to incrementalSaves folder before saving.</whatsThis>
+            <toolTip>Copies old version of file to incrementalSaves folder before saving.</toolTip>
+            <iconText></iconText>
+            <activationFlags>1</activationFlags>
+            <activationConditions>0</activationConditions>
+            <shortcut>ctrl+alt+s</shortcut>
+            <isCheckable>false</isCheckable>
+            <statusTip></statusTip>
+        </Action>
+    </Actions>
+</ActionCollection>
