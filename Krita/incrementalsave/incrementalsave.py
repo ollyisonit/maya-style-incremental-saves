@@ -48,10 +48,7 @@ class IncrementalSaveExtension(Extension):
             # so we need to continue for one more iteration before inserting
             found_item = False
             for file_action in file_menu.actions():
-                print(file_action.objectName())
                 if found_item:
-                    print("INSERTING AFTER")
-                    print(file_action.objectName())
                     file_menu.removeAction(action)
                     file_menu.insertAction(file_action, action)
                     break
