@@ -2,7 +2,7 @@
 <ActionCollection version="2" name="Scripts">
     <Actions category="Scripts">
         <text>Incremental Save</text>
-        <Action name="dninosores_incremental_save">
+        <Action name="dninosores.incrementalsave">
             <icon></icon>
             <text>Incremental Save</text>
             <whatsThis>Copies old version of file to incrementalSaves folder before saving.</whatsThis>
@@ -10,7 +10,6 @@
             <iconText></iconText>
             <activationFlags>1</activationFlags>
             <activationConditions>0</activationConditions>
-            <shortcut>ctrl+alt+s</shortcut>
             <isCheckable>false</isCheckable>
             <statusTip></statusTip>
         </Action>
