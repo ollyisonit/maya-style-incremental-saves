@@ -2,7 +2,7 @@
 
 Maya has a really neat feature called incremental save where as you save your project a version history will be saved in an adjacent folder called `incrementalSaves`. I've often found myself wishing that other applications would organize incremental saving the same way that Maya did, so I've decided to start implementing Maya-style incremental save system in other applications I use.
 
-Each folder in this repository contains an incremental save script or plugin designed to add Maya-style incremental saves to another application, as well as instructions for how to install it. Feel free to fork and submit a PR if you want to add an application that isn't supported yet! Make sure to read through the Behavior and Implementation sections though, as the purpose of this repository is to make incremental save behave exactly the same across all applications it's implemented for.
+Each folder in this repository contains an incremental save script or plugin designed to add Maya-style incremental saves to another application, as well as instructions for how to install it. Feel free to fork and submit a PR if you want to add an application that isn't supported yet! Make sure to read through the Behavior and Implementation sections though, as the purpose of this repository is to make incremental save behave exactly the same across all applications it's implemented for. You can also use the `increment` method in `incrementaltools.py`--it's designed to work with any software as long as you pass in the right methods.
 
 ### Behavior 
 
@@ -29,7 +29,7 @@ This is what the directory structure would look like:
 
 ### Implementation
 
-Here's the algorithm that I use for incremental saving. These steps should run when the incremental save operation is run:
+Here's the algorithm that I use for incremental saving. These steps should run when the incremental save operation is run. Code implementation is in `incrementaltools.py`:
 
 1. Check whether the currently opened file is an incremental save of a different file. If the current file has a name of the form `NAME.####.ext`, is saved in a directory called `incrementalSaves`, and a file called `NAME.ext` exists in the parent directory, then the current file is an incremental save.
 2. If the currently opened file is not an incremental save, copy the file to `incrementalSaves/NAME.####.ext`. Figure out the number to use by scanning the `incrementalSaves` directory and finding the highest current increment number, then adding one. If `incrementalSaves` doesn't exist, create the directory and copy the file as `NAME.0000.ext`. Once the old version is copied, run File > Save (or equivalent) to save the new version of the file as `NAME.ext`
