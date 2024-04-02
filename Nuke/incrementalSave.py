@@ -32,8 +32,18 @@ def swap_increment():
     return True
 
 def increment():
-    if not swap_increment():
-        increment_advance()
+    first_save = False
+    try:
+        test = nuke.scriptName()
+        first_save = False
+    except RuntimeError:
+        first_save = True
+    
+    if first_save:
+        nuke.scriptSaveAs()
+    else:
+        if not swap_increment():
+            increment_advance()
 
 def get_increment_level(incrementalSavesPath):
     current_increment = -1
