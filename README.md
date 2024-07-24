@@ -1,5 +1,7 @@
 # Maya-Style Incremental Save Plugins
 
+![](icon.jpg)
+
 Maya has a really neat feature called incremental save where as you save your project a version history will be saved in an adjacent folder called `incrementalSaves`. I've often found myself wishing that other applications would organize incremental saving the same way that Maya did, so I've decided to start implementing Maya-style incremental save system in other applications I use.
 
 Each folder in this repository contains an incremental save script or plugin designed to add Maya-style incremental saves to another application, as well as instructions for how to install it. Feel free to fork and submit a PR if you want to add an application that isn't supported yet! Make sure to read through the Behavior and Implementation sections though, as the purpose of this repository is to make incremental save behave exactly the same across all applications it's implemented for. You can also use the `increment` method in `incrementaltools.py`--it's designed to work with any software as long as you pass in the right methods.
